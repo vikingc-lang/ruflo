@@ -6,11 +6,7 @@
     "CLAUDE_CODE_ENABLE_FUNCTION_HOOKS": "1"
   },
   "permissions": {
-    "allow": [
-      "Bash(npx @claude-flow*)",
-      "Bash(npx claude-flow*)",
-      "mcp__claude-flow__*"
-    ],
+    "allow": [],
     "deny": [
       "Read(./.env)",
       "Read(./.env.*)"
@@ -243,6 +239,20 @@
       "scanOnEdit": true,
       "cveCheck": true,
       "threatModel": true
+    }
+  },
+  "pluginConfigs": {
+    "ruflo-console@ruflo": {
+      "options": {
+        "sessionWorkspace": false,
+        "eventsPersist": false,
+        "cli": "npx-offline"
+      }
+    },
+    "ruflo-swarm@ruflo": {
+      "options": {
+        "cli": "npx-offline"
+      }
     }
   }
 }
